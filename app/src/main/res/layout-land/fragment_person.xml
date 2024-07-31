@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.mari05lim.tandera.views.custom_views.TanderaToolbar
+        android:id="@+id/toolbar"
+        style="@style/Widget.Tandera.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:fitsSystemWindows="true" />
+
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:transitionGroup="false"
+        android:transitionName="@string/transition_poster_background">
+
+        <FrameLayout
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            app:layout_widthPercent="40%">
+
+            <io.codetail.widget.RevealFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <io.codetail.widget.RevealFrameLayout
+                    android:id="@+id/animation_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/tda_red"
+                    android:visibility="invisible">
+                </io.codetail.widget.RevealFrameLayout>
+
+            </io.codetail.widget.RevealFrameLayout>
+
+            <com.mari05lim.tandera.views.custom_views.TanderaImageView
+                android:id="@+id/poster_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foreground="@drawable/mid_grey_ripple"
+                android:scaleType="fitCenter"
+                android:transitionName="@string/transition_poster" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/spacing_minor"
+            app:layout_widthPercent="60%">
+
+            <include layout="@layout/include_detail_recycler_view" />
+
+        </FrameLayout>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+</FrameLayout>

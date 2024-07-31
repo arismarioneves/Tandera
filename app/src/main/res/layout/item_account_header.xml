@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <com.mari05lim.tandera.views.custom_views.TanderaImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@color/primary"
+        android:scaleType="fitCenter"
+        android:src="?NavDrawerImage" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:paddingLeft="@dimen/spacing_major"
+        android:paddingRight="@dimen/spacing_major"
+        android:paddingBottom="@dimen/spacing_minor"
+        app:columnCount="2"
+        app:rowCount="3">
+
+        <com.mari05lim.tandera.views.custom_views.TanderaImageView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tandera_name_white"
+            app:layout_columnSpan="2" />
+
+        <!--<com.mari05lim.tandera.views.custom_views.TanderaTextView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingBottom="@dimen/spacing_major"-->
+        <!--android:text="@string/nav_drawer_user_header_app_label"-->
+        <!--android:textAppearance="@style/Widget.Tandera.TextAppearance.PrimaryText"-->
+        <!--android:textSize="20.0sp"-->
+        <!--android:textStyle="bold|italic"-->
+        <!--app:layout_columnSpan="2" />-->
+
+        <com.mari05lim.tandera.views.custom_views.TanderaTextView
+            android:id="@+id/watched_movies_txt"
+            style="@style/GridLayoutCell"
+            android:layout_marginStart="0.0dip"
+            android:layout_marginLeft="0.0dip"
+            android:textAppearance="@style/Widget.Tandera.TextAppearance.PrimaryText"
+            android:textSize="22.0sp"
+            app:tda_font="roboto_condensed" />
+
+        <com.mari05lim.tandera.views.custom_views.TanderaTextView
+            android:id="@+id/watched_shows_txt"
+            style="@style/GridLayoutCell"
+            android:layout_marginStart="0.0dip"
+            android:layout_marginLeft="0.0dip"
+            android:textAppearance="@style/Widget.Tandera.TextAppearance.PrimaryText"
+            android:textSize="22.0sp"
+            app:tda_font="roboto_condensed" />
+
+        <com.mari05lim.tandera.views.custom_views.TanderaTextView
+            style="@style/GridLayoutCell"
+            android:layout_marginStart="0.0dip"
+            android:layout_marginLeft="0.0dip"
+            android:text="@string/nav_drawer_user_header_movies_label"
+            android:textAppearance="@style/Widget.Tandera.TextAppearance"
+            android:textSize="14.0sp" />
+
+        <com.mari05lim.tandera.views.custom_views.TanderaTextView
+            style="@style/GridLayoutCell"
+            android:layout_marginStart="0.0dip"
+            android:layout_marginLeft="0.0dip"
+            android:text="@string/nav_drawer_user_header_shows_label"
+            android:textAppearance="@style/Widget.Tandera.TextAppearance"
+            android:textSize="14.0sp" />
+    </androidx.gridlayout.widget.GridLayout>
+</FrameLayout>

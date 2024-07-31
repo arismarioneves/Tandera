@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="?attr/selectableItemBackground"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <com.mari05lim.tandera.views.custom_views.TanderaTextView
+        android:id="@+id/text_view_rating_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder_rating"
+        android:textAppearance="@style/Widget.Tandera.Movie.Rating.Title"
+        tools:text="9.6" />
+
+    <com.mari05lim.tandera.views.custom_views.TanderaTextView
+        android:id="@+id/text_view_rating_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text_view_rating_value"
+        android:layout_marginEnd="@dimen/default_padding"
+        android:layout_marginRight="@dimen/default_padding"
+        android:layout_toEndOf="@+id/text_view_rating_value"
+        android:layout_toRightOf="@+id/text_view_rating_value"
+        android:text="@string/tvdb_range"
+        android:textAppearance="@style/Widget.Tandera.Movie.Rating.Subtitle" />
+
+    <com.mari05lim.tandera.views.custom_views.TanderaTextView
+        android:id="@+id/text_view_rating_votes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text_view_rating_value"
+        android:layout_toEndOf="@id/text_view_rating_range"
+        android:layout_toRightOf="@id/text_view_rating_range"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="@string/no_rating"
+        android:textAppearance="@style/Widget.Tandera.Movie.Rating.Subtitle"
+        tools:text="1234 votes" />
+
+    <com.mari05lim.tandera.views.custom_views.TanderaTextView
+        android:id="@+id/text_view_rating_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_rating_value"
+        android:layout_marginTop="-4dp"
+        android:text="@string/tmdb"
+        android:textAppearance="@style/Widget.Tandera.Movie.Rating.Subtitle" />
+</RelativeLayout>

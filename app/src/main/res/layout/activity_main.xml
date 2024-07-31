@@ -1,0 +1,21 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Tandera="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/fragment_no_drawer" />
+
+    <com.mari05lim.tandera.views.custom_views.MMNavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="?WavePatternDrawable"
+        android:fitsSystemWindows="true"
+        Tandera:headerLayout="@layout/item_account_header"
+        Tandera:itemIconTint="?ColorSeparator"
+        Tandera:itemTextColor="?TextColorPrimary"
+        Tandera:menu="@menu/drawer_view" />
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:internal="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mari05lim.tandera.views.custom_views.TanderaToolbar
+        android:id="@+id/toolbar"
+        style="@style/Widget.Tandera.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:fitsSystemWindows="true" />
+
+    <com.mari05lim.tandera.views.custom_views.recyclerview.TanderaRecyclerView
+        android:id="@+id/primary_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        internal:recyclerviewClipToPadding="true"
+        internal:recyclerviewScrollbars="vertical" />
+</merge>

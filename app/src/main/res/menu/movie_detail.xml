@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_movie_share"
+        android:icon="@drawable/ic_action_share"
+        android:title="@string/share_movie"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_refresh"
+        android:icon="@drawable/ic_action_refresh"
+        android:title="@string/menu_refresh"
+        app:showAsAction="always" />
+    <!--<item-->
+    <!--android:id="@+id/menu_open_tmdb"-->
+    <!--android:title="@string/tmdb"-->
+    <!--app:showAsAction="never" />-->
+    <item
+        android:id="@+id/menu_open_youtube"
+        android:icon="@drawable/ic_youtube_play"
+        android:title="@string/trailer_movie"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_action_movie_websearch"
+        android:title="@string/web_search"
+        app:showAsAction="never" />
+</menu>

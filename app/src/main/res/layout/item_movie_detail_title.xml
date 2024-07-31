@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mari05lim.tandera.views.custom_views.MovieTitleCardLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:internal="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movie_detail_card_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    internal:title="@string/details">
+
+    <LinearLayout
+        android:id="@+id/card_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/spacing_minor">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/spacing_major"
+            android:paddingRight="@dimen/spacing_major">
+
+            <com.mari05lim.tandera.views.custom_views.TanderaTextView
+                android:id="@+id/textview_tagline"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/spacing_micro"
+                android:layout_weight="1.0"
+                android:textColor="?TextColorPrimary"
+                internal:tda_font="roboto_condensed_bold"
+                android:layout_marginEnd="@dimen/spacing_micro" />
+
+            <com.mari05lim.tandera.views.custom_views.TanderaTextView
+                android:id="@+id/textview_release_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.0dip"
+                android:drawablePadding="@dimen/spacing_micro"
+                tools:text="Year"
+                android:textColor="?TextColorPrimary"
+                internal:tda_font="roboto_condensed_bold"
+                android:layout_marginStart="8.0dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_major">
+
+            <RelativeLayout
+                android:layout_width="@dimen/watchableOverviewWidth"
+                android:layout_height="@dimen/watchableOverviewHeight">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/white" />
+
+                <com.mari05lim.tandera.views.custom_views.TanderaImageView
+                    android:id="@+id/poster_image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1.0dip"
+                    android:scaleType="centerCrop" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="12.0dip"
+                android:paddingLeft="12.0dip"
+                android:paddingRight="12.0dip"
+                android:paddingTop="0.0dip">
+
+                <com.mari05lim.tandera.views.custom_views.RatingBarLayout
+                    android:id="@+id/rating_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </com.mari05lim.tandera.views.custom_views.RatingBarLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_divider" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.mari05lim.tandera.views.custom_views.MovieWatchedToggler
+                    android:id="@+id/toggler_watched"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    internal:togglerOff="?attr/ImageViewTogglerOff"
+                    internal:togglerOn="?attr/ImageViewTogglerOn" />
+
+                <View
+                    android:layout_width="1.0dp"
+                    android:layout_height="fill_parent"
+                    android:background="?android:listDivider" />
+
+                <TextView
+                    android:id="@+id/button_trailer"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_minor"
+                    android:text="@string/trailer_movie"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                    android:textColor="?attr/colorAccent" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.mari05lim.tandera.views.custom_views.MovieTitleCardLayout>

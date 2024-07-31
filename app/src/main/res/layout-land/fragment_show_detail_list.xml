@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:internal="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/include_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="@dimen/fragment_show_tuner_width"
+            android:layout_height="fill_parent">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fillViewport="true"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/data_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:transitionGroup="true">
+
+                    <com.mari05lim.tandera.views.custom_views.TanderaImageView
+                        android:id="@+id/fanart_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fitsSystemWindows="true"
+                        android:scaleType="centerCrop" />
+
+                    <com.mari05lim.tandera.views.custom_views.GradientView
+                        android:id="@+id/gradientview_fanart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        internal:angle="90.0"
+                        internal:endColor="#00000000"
+                        internal:startColor="#cc000000" />
+
+                    <include
+                        android:id="@+id/header"
+                        layout="@layout/include_show_detail_header_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </FrameLayout>
+
+            </ScrollView>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/include_detail_recycler_view" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+
+            android:clickable="true"
+            android:elevation="8dp"
+            android:contentDescription=""
+
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_action_play_arrow" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>

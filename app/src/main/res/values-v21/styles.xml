@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Tandera.ActionBar.Progress" parent="@android:style/Widget.Material.Light.ProgressBar" />
+    <style name="Widget.Tandera.ProgressBar" parent="android:Widget.Material.Light.ProgressBar.Horizontal">
+        <item name="android:minHeight">4dp</item>
+        <item name="android:maxHeight">4dp</item>
+    </style>
+    <style name="Widget.Tandera.RatingBar" parent="android:Widget.Material.Light.RatingBar" />
+    <style name="Base.Widget.AppCompat.Button" parent="@android:style/Widget.Material.Button" />
+
+</resources>

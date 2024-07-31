@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#F44336</color>
+    <color name="primary_dark">#D32F2F</color>
+    <!--<color name="primary_light">#FFCDD2</color>-->
+    <color name="accent">#FF9800</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <!--<color name="icons">#FFFFFF</color>-->
+    <color name="divider">#BDBDBD</color>
+
+    <color name="dark_primary">#ff212124</color>
+    <color name="dark_primary_dark">#ff303032</color>
+    <!--<color name="dark_primary_light">#DCEDC8</color>-->
+    <!--<color name="dark_accent">#FF9800</color>-->
+    <!--<color name="dark_primary_text">#212121</color>-->
+    <color name="dark_secondary_text">#ff757577</color>
+    <!--<color name="dark_icons">#212121</color>-->
+    <!--<color name="dark_divider">#BDBDBD</color>-->
+
+    <color name="divider_inverse">#1A000000</color>
+    <color name="separator">#ff1c1c1c</color>
+    <color name="separator_inverse">#ffe9e9e9</color>
+
+    <!--<color name="tda_green">#43A047</color>-->
+    <color name="tda_red">#f45531</color>
+    <color name="tda_gray">#ffbdbdbf</color>
+    <color name="tda_neutral">#f5f5f7</color>
+    <color name="tda_black">#000000</color>
+    <color name="tda_white">#ffffff</color>
+    <color name="tda_white_50">#50ffffff</color>
+
+    <color name="material_dialog_dark">#363F44</color>
+    <color name="material_dialog_light">#EDEDED</color>
+
+    <color name="translucent_black_dark">#BB000000</color>
+    <color name="protection_dark">#66000000</color>
+    <color name="dark_gray">#FF333333</color>
+    <color name="mid_grey">#40808080</color>
+    <color name="white_hint_color">#80ffffff</color>
+
+    <color name="faded_search_background">#80000000</color>
+
+    <!-- Custom Colors -->
+    <!--<color name="background_material_dark_tda">#ff424242</color>-->
+    <!--<color name="background_material_light_tda">#ffeeeeee</color>-->
+
+    <color name="background_button_state_pressed">@color/primary</color>
+    <color name="background_button_state_hovered">@color/primary</color>
+
+    <color name="pressed_dark">#1c000000</color>
+    <color name="focused_dark">#0f000000</color>
+    <color name="onboarding_nav_bar_color_light">#ffeeeff0</color>
+
+    <color name="pressed_light">#1cffffff</color>
+    <color name="focused_light">#0fffffff</color>
+
+    <color name="graph_interval_checked_color_dark">#ff444444</color>
+    <color name="graph_interval_checked_color_light">#ffeeeeee</color>
+    <color name="graph_interval_disabled_color">#ffbdbdbf</color>
+    <color name="graph_interval_pressed_color_dark">#ff555555</color>
+    <color name="graph_interval_pressed_color_light">#ffdddddd</color>
+
+    <color name="cardview_dark_background">#ff202020</color>
+    <color name="cardview_light_background">#fffafafa</color>
+    <color name="cardview_shadow_start_color">#37000000</color>
+    <color name="cardview_shadow_end_color">#03000000</color>
+
+    <!-- Page indicator -->
+    <color name="default_circle_indicator_fill_color">#FFFFFFFF</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
+
+    <color name="button_info_text_default">#ffffff</color>
+    <color name="button_info_text_disabled">#66ffffff</color>
+    <color name="button_info_text_focused">#ffffff</color>
+    <color name="button_info_text_pressed">#ffffff</color>
+
+    <color name="button_border_default">#66ffffff</color>
+    <color name="button_border_disabled">#20ffffff</color>
+    <color name="button_border_focused">#66ffffff</color>
+    <color name="button_border_pressed">@color/primary_dark</color>
+
+    <color name="button_background_focused">#ffffff</color>
+
+    <color name="button_info_background_default">#33ffffff</color>
+    <color name="button_info_background_disabled">#20ffffff</color>
+    <color name="button_info_background_pressed">#66ffffff</color>
+
+</resources>

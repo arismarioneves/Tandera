@@ -1,0 +1,196 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin - Firebase
+apply plugin: 'com.jakewharton.butterknife' // ButterKnife
+apply plugin: 'kotlin-android' // Kotlin
+apply plugin: 'kotlin-android-extensions' // Kotlin
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion '30.0.2'
+    defaultConfig {
+        applicationId "com.mari05lim.tandera"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 13
+        versionName "2.3"
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+        multiDexEnabled true
+
+        renderscriptTargetApi 29
+        renderscriptSupportModeEnabled true
+
+        buildConfigField "String", "BUILD_TIME", "\"${buildTime()}\""
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            versionNameSuffix "-debug"
+        }
+
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+    }
+
+    testOptions.unitTests.all {
+        testLogging {
+            events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+        }
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    //configurations.all {
+        //resolutionStrategy.force 'com.'
+    //}
+
+}
+
+static def buildTime() {
+    return new Date().format("yyyy-MM-dd'T'HH:mm'Z'", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // Android X
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v13:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.palette:palette-ktx:1.0.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'androidx.percentlayout:percentlayout:1.0.0'
+    implementation 'androidx.browser:browser:1.3.0'
+    implementation 'androidx.fragment:fragment-ktx:1.2.5'
+
+    // Multidex
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Google Material
+    implementation 'com.google.android.material:material:1.2.1'
+
+    // Google - AdMob
+    implementation 'com.google.android.gms:play-services-ads:19.6.0'
+
+    // Firebase - Analytics
+    implementation 'com.google.firebase:firebase-core:18.0.0'
+
+    // Firebase - AdMob
+    implementation 'com.google.firebase:firebase-ads:19.6.0'
+
+    // Firebase - FCM (Firebase Cloud Messaging)
+    //implementation 'com.google.firebase:firebase-messaging:21.0.0'
+
+    // tmdb-java
+    implementation files('libs/tmdb-java-0.8.1.jar')
+    //implementation 'com.uwetrottmann:tmdb-java:0.10.1'
+
+    // Android Donations Lib - In-App Billing
+    implementation 'org.sufficientlysecure:donations:2.6'
+
+    // UltimateRecyclerView
+    //implementation 'com.hkm.ui:ultimaterecyclerview:0.5.8'
+    implementation 'com.marshalchen.ultimaterecyclerview:library:0.7.2'
+
+    // CircularReveal
+    implementation 'com.github.ozodrukh:CircularReveal:1.0.6'
+
+    // SmoothProgressBar - CircularProgressBar
+    implementation 'com.github.castorflex.smoothprogressbar:library:1.1.0'
+    implementation 'com.github.castorflex.smoothprogressbar:library-circular:1.3.0'
+
+    // Android-SpinKit
+    implementation 'com.github.ybq:Android-SpinKit:1.1.0'
+
+    // MaterialDialogs - Core
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+
+    // Moxy
+    implementation 'com.arello-mobile:moxy:1.5.6'
+    annotationProcessor 'com.arello-mobile:moxy-compiler:1.5.6'
+
+    // ButterKnife
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
+    // Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit:retrofit:1.9.0'
+    /*implementation ('com.squareup.retrofit2:retrofit:2.5.0') {
+        // exclude Retrofit’s OkHttp peer-dependency module and define your own module import
+        exclude module: 'okhttp'
+    }*/
+
+    // OkHttp
+    implementation 'com.squareup.okhttp:okhttp-urlconnection:2.7.5'
+    implementation 'com.squareup.okhttp:okhttp:2.7.5'
+
+    // Otto
+    implementation 'com.squareup:otto:1.3.8'
+
+    // Guava
+    implementation('com.google.guava:guava:29.0-jre')
+
+    // Dagger
+    implementation 'com.squareup.dagger:dagger:1.2.5'
+    annotationProcessor 'com.squareup.dagger:dagger-compiler:1.2.5'
+
+    // UniversalImageLoader
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    // Gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    // Dependencies for local unit tests
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+
+    testImplementation "org.powermock:powermock-module-junit4:$powermock_version"
+    testImplementation "org.powermock:powermock-api-mockito:$powermock_version"
+    testImplementation "org.mockito:mockito-all:$mockito_version"
+    testImplementation "org.hamcrest:hamcrest-all:$hamcrest_version"
+
+    // Espresso UI Testing dependencies
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espresso_version"
+    implementation "androidx.test.espresso:espresso-idling-resource:$espresso_version"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$espresso_version"
+}

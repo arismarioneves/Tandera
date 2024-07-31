@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/menu_group_1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_watched"
+            android:icon="@drawable/ic_action_video_library"
+            android:title="@string/category_watched" />
+        <item
+            android:id="@+id/menu_movies"
+            android:icon="@drawable/ic_action_movie"
+            android:title="@string/category_movies" />
+        <item
+            android:id="@+id/menu_shows"
+            android:icon="@drawable/ic_action_tv"
+            android:title="@string/category_shows" />
+    </group>
+
+    <group android:id="@+id/menu_group_2">
+        <item
+            android:id="@+id/menu_stream"
+            android:icon="@drawable/ic_action_stream"
+            android:title="@string/category_stream" />
+        <item
+            android:id="@+id/menu_country"
+            android:icon="@drawable/ic_action_language"
+            android:title="@string/category_country" />
+    </group>
+
+    <group android:id="@+id/menu_group_3">
+        <item
+            android:id="@+id/menu_settings"
+            android:icon="@drawable/ic_action_settings"
+            android:title="@string/category_settings" />
+        <item
+            android:id="@+id/menu_about"
+            android:icon="@drawable/ic_action_info"
+            android:title="@string/category_about" />
+        <item
+            android:id="@+id/menu_mail"
+            android:icon="@drawable/ic_action_feedback"
+            android:title="@string/category_mail" />
+    </group>
+
+    <group android:id="@+id/menu_group_4">
+        <item
+            android:id="@+id/menu_donate"
+            android:icon="@drawable/ic_action_gift"
+            android:title="@string/category_donate" />
+    </group>
+
+</menu>

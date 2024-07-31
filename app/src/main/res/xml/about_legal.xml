@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_legal">
+        <Preference
+            android:key="tos"
+            android:title="@string/tos"
+            android:summary="@string/tos_priv" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://telegra.ph/Tandera-TOS-07-07" />
+        </Preference>
+
+        <Preference
+            android:key="com.mari05lim.tandera.licenses"
+            android:title="@string/show_licenses_summary"
+            android:summary="@string/show_licenses" />
+
+        <Preference
+            android:key="poweredTmdb"
+            android:title="@string/powered_tmdb"
+            android:summary="@string/powered_tmdb_content" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

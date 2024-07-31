@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_about">
+        <Preference
+            android:key="creator"
+            android:title="@string/creator"
+            android:summary="@string/creator_context" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://play.google.com/store/apps/dev?id=6315019760268946779" />
+        </Preference>
+
+        <Preference
+            android:key="site"
+            android:title="@string/site"
+            android:summary="@string/app_name" >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://www.tandera.online/" />
+        </Preference>
+
+        <Preference
+            android:key="com.mari05lim.tandera.version"
+            android:title="@string/build_version"
+            android:summary="@string/app_name" />
+
+        <Preference
+            android:key="com.mari05lim.tandera.share"
+            android:title="@string/share"
+            android:summary="@string/share_text" />
+
+        <Preference
+            android:key="com.mari05lim.tandera.rate"
+            android:title="@string/rate"
+            android:summary="@string/rate_text" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

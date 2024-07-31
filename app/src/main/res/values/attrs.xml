@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ArcProgress">
+        <attr name="arc_progress" format="integer"/>
+        <attr name="arc_angle" format="float"/>
+        <attr name="arc_stroke_width" format="dimension"/>
+        <attr name="arc_max" format="integer"/>
+        <attr name="arc_unfinished_color" format="color"/>
+        <attr name="arc_finished_color" format="color"/>
+        <attr name="arc_text_size" format="dimension"/>
+        <attr name="arc_text_color" format="color"/>
+        <attr name="arc_suffix_text" format="string"/>
+        <attr name="arc_suffix_text_size" format="dimension"/>
+        <attr name="arc_suffix_text_padding" format="dimension"/>
+        <attr name="arc_bottom_text" format="string"/>
+        <attr name="arc_bottom_text_size" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="Themes">
+        <attr name="arcProgressStyle" format="reference"/>
+    </declare-styleable>
+
+    <attr name="tda_font" format="enum">
+        <enum name="roboto_condensed" value="1" />
+        <enum name="roboto_condensed_light" value="2" />
+        <enum name="roboto_condensed_bold" value="3" />
+    </attr>
+
+    <attr name="font_collapsed" format="integer"/>
+    <attr name="font_expanded" format="integer"/>
+    <attr name="title" format="string|reference" />
+
+    <declare-styleable name="RatingCircleView">
+        <attr name="ratePrompt" format="string|reference" />
+        <attr name="backgroundCircleColor" format="color|reference" />
+        <attr name="foregroundCircleColor" format="color|reference" />
+        <attr name="arcColor" format="color|reference" />
+        <attr name="textColor" format="color|reference" />
+        <attr name="tda_font" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandablePanel">
+        <attr name="handle" format="reference" />
+        <attr name="content" format="reference" />
+        <attr name="collapsedHeight" format="dimension" />
+        <attr name="animationDuration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="TanderaTextView">
+        <attr name="tda_font" />
+    </declare-styleable>
+
+    <declare-styleable name="TanderaToolbar">
+        <attr name="tda_font" />
+    </declare-styleable>
+
+    <declare-styleable name="TanderaToolbarLayout">
+        <attr name="font_collapsed" />
+        <attr name="font_expanded" />
+    </declare-styleable>
+
+    <declare-styleable name="TanderaButton">
+        <attr name="tda_font" />
+    </declare-styleable>
+
+    <declare-styleable name="TanderaEditText">
+        <attr name="tda_font" />
+    </declare-styleable>
+
+    <declare-styleable name="MovieDetailInfoLayout">
+        <attr name="title" />
+    </declare-styleable>
+
+    <declare-styleable name="MovieDetailCardLayout">
+        <attr name="title" />
+    </declare-styleable>
+
+    <declare-styleable name="GradientView">
+        <attr name="startColor" format="color" />
+        <attr name="endColor" format="color" />
+        <attr name="angle" format="float|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="MovieTitleCardLayout">
+        <attr name="title" />
+    </declare-styleable>
+
+    <declare-styleable name="MovieDetailCardLayoutWithoutTitle">
+    </declare-styleable>
+
+    <declare-styleable name="TvShowDialogView">
+        <attr name="title" />
+        <attr name="android:background" />
+    </declare-styleable>
+
+    <declare-styleable name="MovieWatchedToggler">
+        <attr name="togglerOff" format="reference"/>
+        <attr name="togglerOn" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ForegroundLinearLayout">
+        <attr name="android:foreground" />
+        <attr name="android:foregroundGravity" />
+    </declare-styleable>
+
+    <declare-styleable name="TanderaTheme">
+        <attr name="grey_shade" format="color|reference" />
+        <attr name="BackgroundColorPrimary" format="color|reference" />
+        <attr name="BackgroundColorSecondary" format="color|reference" />
+        <attr name="ButtonTextColorBorderlessWhite" format="color|reference" />
+        <attr name="ButtonTextColorBorderlessGreen" format="color|reference" />
+        <attr name="RevealBackgroundColor" format="color|reference" />
+        <attr name="TextColorPrimary" format="color|reference" />
+        <attr name="TextColorSecondary" format="color|reference" />
+        <attr name="DialogBackgroundColor" format="color|reference" />
+        <attr name="TextColorPrimaryInverse" format="color|reference" />
+        <attr name="TextColorSecondaryInverse" format="color|reference" />
+        <attr name="IconTintColorPrimary" format="color|reference" />
+        <attr name="RadioButtonTextColor" format="color|reference" />
+        <attr name="StaleColor" format="color|reference" />
+        <attr name="PinDotColor" format="color|reference" />
+        <attr name="OnboardingQuestionTextColor" format="color|reference" />
+        <attr name="RoundedBackgroundMiddle" format="reference" />
+        <attr name="RoundedBackgroundBottom" format="reference" />
+        <attr name="RoundedBackgroundTop" format="reference" />
+        <attr name="ShareIconItem" format="reference" />
+        <attr name="StarIconItem" format="reference" />
+        <attr name="NavDrawerImage" format="reference" />
+        <attr name="RadioButtonDrawable" format="reference" />
+        <attr name="WavePatternDrawable" format="reference" />
+        <attr name="OnboardingNavBarBackground" format="reference" />
+        <attr name="drawableDropdown" format="reference" />
+        <attr name="CardBackground" format="reference" />
+        <attr name="ColorSeparator" format="reference|color" />
+        <attr name="ColorDivider" format="reference|color" />
+        <attr name="ColorBackgroundDim" format="reference|color" />
+        <attr name="ImageViewTogglerOff" format="reference" />
+        <attr name="ImageViewTogglerOn" format="reference" />
+        <attr name="catFontRegular" format="string" />
+        <attr name="catFontRegular50" format="string" />
+        <attr name="SearchTintColor" format="reference|color" />
+        <attr name="SearchTextColor" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableTextView">
+        <attr name="expanded_status" format="boolean|reference" />
+        <attr name="collapsed_maxLines" format="integer|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="AutofitTextView">
+        <attr name="minTextSize" format="reference" />
+        <attr name="precision" format="float|reference" />
+        <attr name="sizeToFit" format="boolean|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="FloatLabelLayout">
+        <attr name="floatLabelTextAppearance" format="reference" />
+        <attr name="floatLabelPaddingLeft" format="reference|dimension" />
+        <attr name="floatLabelPaddingRight" format="reference|dimension" />
+        <attr name="floatLabelPaddingTop" format="reference|dimension" />
+        <attr name="floatLabelPaddingBottom" format="reference|dimension" />
+        <!-- The hint to display in the floating label -->
+        <attr name="floatLabelHint" format="reference|string" />
+    </declare-styleable>
+
+    <declare-styleable name="SlidingTabLayout">
+        <attr name="selectedColor" format="color" />
+        <attr name="indicatorHeight" format="reference|dimension" />
+        <attr name="dividerColor" format="color" />
+        <attr name="android:textAppearance" />
+        <attr name="contentInsetStart" />
+    </declare-styleable>
+
+    <declare-styleable name="CollapsingTitleLayout">
+        <attr name="expandedMargin" format="reference|dimension" />
+        <attr name="expandedMarginStart" format="reference|dimension" />
+        <attr name="expandedMarginBottom" format="reference|dimension" />
+        <attr name="expandedMarginEnd" format="reference|dimension" />
+        <attr name="expandedTextSize" format="reference|dimension" />
+        <attr name="collapsedTextSize" format="reference|dimension" />
+        <attr name="android:textAppearance" />
+        <attr name="textSizeInterpolator" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CollapsingTextAppearance">
+        <attr name="android:textSize" />
+        <attr name="android:textColor" />
+    </declare-styleable>
+
+    <declare-styleable name="ViewPagerIndicator">
+        <!-- Style of the circle indicator. -->
+        <attr name="vpiCirclePageIndicatorStyle" format="reference"/>
+        <!-- Style of the icon indicator's views. -->
+        <attr name="vpiIconPageIndicatorStyle" format="reference"/>
+        <!-- Style of the line indicator. -->
+        <attr name="vpiLinePageIndicatorStyle" format="reference"/>
+        <!-- Style of the title indicator. -->
+        <attr name="vpiTitlePageIndicatorStyle" format="reference"/>
+        <!-- Style of the tab indicator's tabs. -->
+        <attr name="vpiTabPageIndicatorStyle" format="reference"/>
+        <!-- Style of the underline indicator. -->
+        <attr name="vpiUnderlinePageIndicatorStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="CirclePageIndicator">
+        <!-- Whether or not the indicators should be centered. -->
+        <attr name="centered" format="boolean"/>
+        <!-- Color of the filled circle that represents the current page. -->
+        <attr name="fillColor" format="color|reference" />
+        <!-- Color of the filled circles that represents pages. -->
+        <attr name="pageColor" format="color|reference" />
+        <!-- Orientation of the indicator. -->
+        <attr name="android:orientation"/>
+        <!-- Radius of the circles. This is also the spacing between circles. -->
+        <attr name="radius" format="reference|dimension" />
+        <!-- Whether or not the selected indicator snaps to the circles. -->
+        <attr name="snap" format="boolean" />
+        <!-- Color of the open circles. -->
+        <attr name="tda_strokeColor" format="color|reference" />
+        <!-- Width of the stroke used to draw the circles. -->
+        <attr name="tda_strokeWidth" format="reference|dimension" />
+        <!-- View background -->
+        <attr name="android:background"/>
+    </declare-styleable>
+
+    <declare-styleable name="TanderaRecyclerView">
+        <attr name="recyclerSliding" format="boolean"/>
+    </declare-styleable>
+</resources>

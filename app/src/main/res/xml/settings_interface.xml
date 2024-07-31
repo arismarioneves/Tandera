@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pref_media_download">
+        <CheckBoxPreference
+            android:defaultValue="False"
+            android:key="com.mari05lim.tandera.updatewifionly"
+            android:title="@string/pref_updatewifionly"
+            android:summary="@string/pref_updatewifionly_summary" />
+
+        <CheckBoxPreference
+            android:defaultValue="True"
+            android:key="com.mari05lim.tandera.animations"
+            android:title="@string/pref_animations"
+            android:summary="@string/pref_animations_summary" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_appearance">
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/themeSelection"
+            android:entryValues="@array/themeSelectionData"
+            android:key="com.mari05lim.tandera.theme"
+            android:title="@string/pref_theme" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/countrySelection"
+            android:entryValues="@array/countrySelectionData"
+            android:key="com.mari05lim.tandera.country"
+            android:title="@string/pref_country" />
+
+<!--        <ListPreference-->
+<!--            android:defaultValue="0"-->
+<!--            android:entries="@array/languageSelection"-->
+<!--            android:entryValues="@array/languageSelectionData"-->
+<!--            android:key="com.mari05lim.tandera.language"-->
+<!--            android:title="@string/pref_language" />-->
+
+        <Preference
+            android:key="com.mari05lim.tandera.notification_settings"
+            android:title="@string/pref_notification"
+            android:summary="@string/pref_notification_sumary" />
+            <!--<intent-->
+                <!--android:action="android.intent.action.VIEW"-->
+                <!--android:targetPackage="com.mari05lim.tandera"-->
+                <!--android:targetClass="com.mari05lim.tandera.Country"/>-->
+        <!--</Preference>-->
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

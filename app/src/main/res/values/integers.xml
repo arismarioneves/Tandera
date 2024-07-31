@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="default_summary_maxlines">5</integer>
+    <integer name="detail_card_max_items">3</integer>
+    <integer name="welcome_view_content_weight">5</integer>
+    <integer name="welcome_view_image_weight">4</integer>
+
+    <!-- Page indicator -->
+    <integer name="default_circle_indicator_orientation">0</integer>
+    <array name="loading_colors">
+        <item>@color/accent</item>
+        <item>@color/tda_black</item>
+    </array>
+
+    <integer name="anim_duration_long">500</integer>
+    <integer name="anim_duration_medium">400</integer>
+    <integer name="image_background_fade_millis">1000</integer>
+    <integer name="rapid_animation">120</integer>
+
+</resources>

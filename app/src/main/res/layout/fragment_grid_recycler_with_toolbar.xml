@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/include_toolbar" />
+
+    <FrameLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize" >
+
+    <com.mari05lim.tandera.views.custom_views.recyclerview.TanderaRecyclerView
+        android:id="@+id/primary_recycler_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/spacing_micro"
+        android:layout_marginRight="@dimen/spacing_micro"
+        android:layout_marginLeft="@dimen/spacing_micro"
+        android:clipToPadding="false"
+        android:fadeScrollbars="true"
+
+        android:scrollbarStyle="outsideOverlay"
+
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:recyclerSliding="true"
+
+        app:recyclerviewClipToPadding="true"
+        app:recyclerviewScrollbars="vertical" />
+
+    </FrameLayout>
+
+</merge>

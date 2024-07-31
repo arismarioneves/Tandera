@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mari05lim.tandera.views.custom_views.TanderaToolbar
+        android:id="@+id/toolbar"
+        style="@style/Widget.Tandera.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:fitsSystemWindows="true" />
+
+    <io.codetail.widget.RevealFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <io.codetail.widget.RevealFrameLayout
+            android:id="@+id/animation_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/tda_neutral"
+            android:visibility="invisible">
+        </io.codetail.widget.RevealFrameLayout>
+
+    </io.codetail.widget.RevealFrameLayout>
+
+    <FrameLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <include layout="@layout/include_detail_recycler_view" />
+    </FrameLayout>
+</FrameLayout>

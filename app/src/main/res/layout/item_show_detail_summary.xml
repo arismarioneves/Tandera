@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mari05lim.tandera.views.custom_views.MovieDetailCardLayoutWithoutTitle xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/movie_detail_card_details"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/card_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_major"
+        android:paddingTop="@dimen/spacing_minor">
+
+        <com.mari05lim.tandera.views.custom_views.ExpandableTextView
+            android:id="@+id/textview_summary"
+            style="@style/Widget.Tandera.Movie.Detail.Summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tda_font="roboto_condensed" />
+    </LinearLayout>
+</com.mari05lim.tandera.views.custom_views.MovieDetailCardLayoutWithoutTitle>

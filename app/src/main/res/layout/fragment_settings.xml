@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/keyline"
+    android:paddingRight="@dimen/keyline">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/accent"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <ListView
+            android:id="@+id/listViewSettingsHeaders"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="43dp" />
+</RelativeLayout>

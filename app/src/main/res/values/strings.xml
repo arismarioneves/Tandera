@@ -1,0 +1,360 @@
+<resources>
+
+    <!-- Application Name -->
+    <string name="app_name">Tandera</string>
+
+    <string name="whois_tandera">\"Tandera é uma lente que nos aproxima de uma realidade impossível de ver com um olhar humano. É uma visão de longo alcance.\"</string>
+
+    <!-- Themes -->
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Escuro</string>
+
+    <!-- Welcome Items -->
+    <string name="welcome_to_Tandera">Bem-vindo ao Tandera</string>
+    <string name="welcome_desc">Deslize para saber mais.</string>
+
+    <string name="use_Tandera_title">Use o Tandera em qualquer lugar.</string>
+    <string name="use_Tandera_desc">Encontre onde assistir aos seus filmes e séries favoritas com a busca em vários provedores de streaming.</string>
+
+    <string name="welcome_extras_title">Encontre filmes e séries de forma rápida e prática.</string>
+    <string name="welcome_extras_desc">Obtenha automaticamente acesso a trailers e extras dos seus títulos preferidos.</string>
+
+    <!-- This is an ad unit ID for a test ad. -->
+    <string name="admob_banner_ad_unit_id" translatable="false">ca-app-pub-xxxx</string>
+    <string name="admob_interstitial_ad_unit_id" translatable="false">ca-app-pub-xxxx</string>
+
+    <!-- AdMob Ads - Banner, Interstitial -->
+    <!--<string name="admob_banner_ad_unit_id" translatable="false">ca-app-pub-xxxx</string>-->
+    <!--<string name="admob_interstitial_ad_unit_id" translatable="false">ca-app-pub-xxxx</string>-->
+
+    <!-- Navigation Drawer Menu -->
+    <string name="nav_drawer_user_header_movies_label">Filmes Salvos</string>
+    <string name="nav_drawer_user_header_shows_label">Séries Salvas</string>
+
+    <string name="category_watched">Biblioteca</string>
+    <string name="category_movies">Filmes</string>
+    <string name="category_shows">Séries</string>
+
+    <string name="category_stream">Provedores</string>
+    <string name="category_country">País</string>
+
+    <string name="category_settings">Configurações</string>
+    <string name="category_about">Sobre</string>
+    <string name="category_mail">Feedback</string>
+    <string name="category_donate">Doar</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!-- Categoria Salvos -->
+    <string name="watchable_movie">Filme</string>
+    <string name="watchable_show">Série</string>
+
+    <string name="watchable_season">Temporada</string>
+    <string name="watchable_episode">Episódio</string>
+
+    <string name="watchable_none">-</string>
+
+    <!-- Categoria Busca -->
+    <string name="movie">Filme</string>
+    <string name="show">Série</string>
+
+    <!-- Main Titles -->
+    <string name="movies_title">Filmes</string>
+    <string name="shows_title">Séries</string>
+    <string name="people_title">Pessoas</string>
+    <string name="settings_title">Configurações</string>
+
+    <string name="watched_title">Salvos</string>
+    <string name="search_title">Buscar</string>
+
+    <string name="popular_title">Em Alta</string>
+    <string name="in_theatres_title">Nos Cinemas</string>
+    <string name="upcoming_title">Em Breve</string>
+    <string name="on_the_air_title">Lançando</string>
+
+    <!-- Feedback -->
+    <string name="feedback">Enviar feedback</string>
+
+    <!-- Media Items -->
+    <string name="details">Detalhes</string>
+    <string name="movie_details_released">Lançamento</string>
+    <string name="movie_details_runtime">Duração</string>
+    <string name="movie_details_runtime_content">%1$d min</string>
+    <string name="movie_details_certification">Classificação</string>
+    <string name="movie_details_genres">Gênero</string>
+    <string name="movie_details_budget">Orçamento</string>
+    <string name="movie_details_budget_content">$%,d</string>
+    <string name="movie_details_language">Idioma</string>
+    <string name="movie_details_seasons">Temporadas</string>
+    <string name="movie_details_episodes">Episódios</string>
+
+    <!-- Title Items -->
+    <string name="cast_movies">Elenco</string>
+    <string name="crew_movies">Equipe Técnica</string>
+    <string name="related_movies">Relacionados</string>
+    <string name="show_seasons">Temporadas</string>
+
+    <string name="biography">Biografia</string>
+
+    <string name="person_cast_movies">Como Ator</string>
+    <string name="person_crew_movies">Como Equipe técnica</string>
+
+    <string name="watched_movie">Salvar</string>
+    <string name="trailer_movie">Trailer</string>
+
+    <string name="placeholder_rating">--</string>
+    <string name="tvdb_range">/10</string>
+    <string name="no_rating">n/d</string>
+    <string name="show_isalive">Lançando</string>
+    <string name="show_isnotalive">Finalizada</string>
+    <string name="show_unknown">-</string>
+
+    <string name="tv_season_specials">Episódios Especiais</string>
+    <string name="tv_season_number">%1$dª Temporada</string>
+    <string name="season_air_date">Lançamento: %1$s</string>
+
+    <!-- Settings Menu-->
+    <string name="prefs_category_basic">Personalizar</string>
+    <string name="prefs_category_cache">Armazenamento</string>
+    <string name="prefs_category_about">Informações</string>
+    <string name="prefs_category_legal">Legal e Privacidade</string>
+
+    <!-- Personalizar -->
+    <string name="pref_media_download">Download automático de mídia</string>
+
+    <string name="pref_updatewifionly">Imagens apenas via Wi-Fi</string>
+    <string name="pref_updatewifionly_summary">Não fazer o download em redes móveis, para reduzir o consumo de dados.</string>
+
+    <string name="pref_animations">Ativar animações de transição</string>
+    <string name="pref_animations_summary">Desligue as animações se tiver problemas de performance.</string>
+
+    <string name="pref_appearance">Interface</string>
+
+    <string name="pref_theme">Tema</string>
+    <string name="pref_country">País</string>
+<!--    <string name="pref_language">Idioma</string>-->
+
+    <string name="pref_country_title">Mudar país</string>
+    <string name="pref_country_alert">Reinicie o aplicativo caso a alteração não fique disponível, ou aperte Atualizar na página Filmes ou Séries.</string>
+
+    <string name="pref_notification">Notificações</string>
+    <string name="pref_notification_sumary">Alterar as configurações de notificação.</string>
+
+    <!-- Armazenamento -->
+    <string name="pref_cache">Armazenamento</string>
+    <string name="clear_cache">Limpar Cache</string>
+    <string name="clear_cache_summary">Remover todas as imagens salvas no aplicativo.</string>
+
+    <string name="local_database">Limpar Biblioteca</string>
+    <string name="local_database_summary">Remover todos os filmes salvos da biblioteca.</string>
+
+    <string name="local_database_title">Limpar títulos salvos</string>
+    <string name="local_database_alert">Tem certeza que deseja limpar a biblioteca de salvos?</string>
+
+    <!-- Informações -->
+    <string name="pref_about">Sobre</string>
+    <string name="creator">Desenvolvedor</string>
+    <string name="creator_context">Mari05liM</string> //Arismário Neves
+
+    <string name="site">Web</string>
+
+    <string name="build_version">Versão</string>
+
+    <string name="share">Compartilhar</string>
+    <string name="share_text">Mostre-me ao mundo!</string>
+
+    <string name="rate">Deixe o seu comentário</string>
+    <string name="rate_text">Avalie a aplicação no Google Play</string>
+
+    <!-- Legal e Privacidade -->
+    <string name="pref_legal">Aviso Legal e Privacidade</string>
+
+    <string name="tos">Termo de Uso</string>
+    <string name="tos_priv">Termos e política de privacidade</string>
+
+    <string name="show_licenses_summary">Licenças e Créditos</string>
+    <string name="show_licenses">Softwares de código aberto e terceiros</string>
+    <string name="about_licenses_title">Licenças de Softwares</string>
+
+    <string name="powered_tmdb">Powered by TMDB</string>
+    <string name="powered_tmdb_content">Este produto usa a API TMDb mas não é endossado ou certificado pelo TMDb.</string>
+
+    <!-- Donate -->
+    <string name="donate_dialog_title">Olá, gosta de Filmes?</string>
+    <string name="donate_dialog">Então, me pague um café! Pois vamos passar um longo tempo juntos.</string>
+    <string name="donate_description">Escolha um café para me presentear :)</string>
+    <string name="donate_button_pay">Pagar Café</string>
+    <string name="donations_thanks_dialog_title">Valeu!</string>
+    <string name="donations_thanks_dialog">Obrigado por me ajudar a tornar o Tandera melhor.</string>
+    <string name="donations_google_android_market_not_supported_title">Erro na Doação</string>
+    <string name="donations_google_android_market_not_supported">Doações no aplicativo não está disponível. A Google Play Store está instalada corretamente?</string>
+
+    <string-array name="donate_google_catalog_values">
+        <item>2,99 R$</item>
+        <item>4,99 R$</item>
+        <item>7,99 R$</item>
+        <item>9,99 R$</item>
+    </string-array>
+
+    <!-- Tmdb Ratings -->
+    <plurals name="votes">
+        <item quantity="zero">%d voto</item>
+        <item quantity="one">%d voto</item>
+        <item quantity="two">%d votos</item>
+        <item quantity="few">%d votos</item>
+        <item quantity="many">%d votos</item>
+        <item quantity="other">%d votos</item>
+    </plurals>
+
+    <!-- Menu items -->
+    <string name="menu_refresh">Atualizar</string>
+    <string name="menu_reload">Recarregar</string>
+    <string name="menu_movie_websearch">Buscar na Web</string>
+    <string name="menu_search">Buscar</string>
+
+    <string name="menu_item_watchable_add_to_watched">Adicionar aos Salvos</string>
+    <string name="menu_item_show_library">Série Salva</string>
+    <string name="menu_item_movie_library">Filme Salvo</string>
+
+    <string name="tmdb">TMDb</string>
+
+    <!-- Action -->
+    <string name="share_tv_show">Compartilhar Série</string>
+    <string name="share_movie">Compartilhar Filme</string>
+    <string name="share_checkout">Se quiser saber onde assistir %s, é só baixar o aplicativo Tandera na Play Store.</string>
+    <string name="label_back">Voltar</string>
+    <string name="label_cancel">Cancelar</string>
+    <string name="web_search">Buscar na Web</string>
+    <string name="explore">Explorar</string>
+
+    <string name="share_app">Compartilhar</string>
+    <string name="share_app_text">Baixe já o TANDERA, um aplicativo gratuito para você encontrar onde assistir os seus Filmes e Séries preferidas.</string>
+
+    <!-- Status Messages -->
+    <string name="loading_more">Carregando mais…</string>
+    <string name="loading">Carregando…</string>
+
+    <string name="error_no_connection">Você está off-line</string>
+    <string name="error_no_connection_body">Verifique sua conexão de rede.</string>
+
+    <string name="country_pt_br">Brasil</string>
+    <string name="country_en_us">Estados Unidos</string>
+    <string name="country_msg">País do conteúdo a ser exibido nos resultados das buscas.</string>
+    <string name="country_change">Alterar País</string>
+
+    <string name="language_pt_br">Português</string>
+    <string name="language_en_us">Inglês</string>
+
+    <string name="error_unknown">Vixe! ¯\\_(ツ)_/¯</string>
+
+    <string name="empty_library_title">Sua biblioteca está vazia</string>
+    <string name="empty_library_body">Explore os melhores filmes para encontrar aqueles que você quer assistir!</string>
+
+    <string name="action_item_added_to_watched">&lt;b>%s&lt;/b> &lt;em>adicionado aos salvos&lt;/em></string>
+    <string name="action_cleared_watched">Biblioteca limpa com sucesso!</string>
+
+    <string name="movie_title_year">%1$s (%2$d)</string>
+    <string name="movie_rating_votes">%1$d%% - %2$d votos</string>
+    <string name="movie_release_date">Data de lançamento: %1$s</string>
+
+    <string name="search_hint">Buscar Filme, Série ou Pessoa</string>
+
+    <string name="person_born_date">Nascimento: %1$s</string>
+    <string name="person_born_date_with_loc">Nascimento: %1$s em %2$s</string>
+    <string name="person_age">Idade: %1$s</string>
+    <string name="person_death_date">Morte: %1$s, idade %2$s</string>
+
+    <string name="unknown_version">Versão Desconhecida</string>
+
+    <string name="android_old">Recurso não compatível com sua versão do Android.</string>
+
+    <string name="stream_found">Provedores encontrados para este título:</string>
+
+    <string name="empty_state_firstline">Oops</string>
+    <string name="empty_state_secondline">Nada foi encontrado! Este título não está disponível.</string>
+
+    <string name="unknown_default">DESCONHECIDO</string>
+
+    <string name="ok">OK</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="cancel">Cancelar</string>
+    <string name="of_course">Mas é claro!</string>
+    <string name="close">Fechar</string>
+
+    <string name="see_more">Ver mais   ❯</string>
+    <string name="activity_continue_with_caret">Continuar   ❯</string>
+
+    <!-- Status Messages Unknown -->
+    <string name="error_movie_not_found_tmdb">Filme não encontrado no TMDb</string>
+    <string name="app_not_available">Nenhum aplicativo disponível para lidar com isso.</string>
+    <string name="error_network">Erro de rede</string>
+    <string name="offline">Conecte-se a uma rede e tente novamente.</string>
+    <string name="offline_no_wifi">Conecte-se a uma rede Wi-Fi ou permita todas as conexões e tente novamente.</string>
+
+    <string name="trailers_movies">Trailers</string>
+    <string name="images_movies">Imagens</string>
+
+    <!-- Genre -->
+    <string name="genre_action">Ação</string>
+    <string name="genre_adventure">Aventura</string>
+    <string name="genre_animation">Animação</string>
+    <string name="genre_children">Infantil</string>
+    <string name="genre_comedy">Comédia</string>
+    <string name="genre_crime">Crime</string>
+    <string name="genre_disaster">Disastre</string>
+    <string name="genre_detective">Policial</string>
+    <string name="genre_documentary">Documentário</string>
+    <string name="genre_drama">Drama</string>
+    <string name="genre_education">Educação</string>
+    <string name="genre_erotic">Erótico</string>
+    <string name="genre_eastern">Oriental</string>
+    <string name="genre_family">Família</string>
+    <string name="genre_fantasy">Fantasia</string>
+    <string name="genre_fanFilm">Fan Film</string>
+    <string name="genre_filmNoir">Filme Noir</string>
+    <string name="genre_food">Comida</string>
+    <string name="genre_foreign">Estrangeiro</string>
+    <string name="genre_gameShow">Game Show</string>
+    <string name="genre_history">Histórico</string>
+    <string name="genre_holiday">Feriado</string>
+    <string name="genre_homeAndGarden">Casa e Jardim</string>
+    <string name="genre_horror">Terror</string>
+    <string name="genre_indie">Indie</string>
+    <string name="genre_kids">Crianças</string>
+    <string name="genre_miniSeries">Minissérie</string>
+    <string name="genre_music">Música</string>
+    <string name="genre_musical">Musical</string>
+    <string name="genre_mystery">Mistério</string>
+    <string name="genre_neoNoir">Neo-noir</string>
+    <string name="genre_news">Notícias</string>
+    <string name="genre_reality">Realidade</string>
+    <string name="genre_roadMovie">Filme de Estrada</string>
+    <string name="genre_romance">Romance</string>
+    <string name="genre_scienceFiction">Ficção científica</string>
+    <string name="genre_sciFiAndFantasy">Sci-Fi &amp; Fantasia</string>
+    <string name="genre_short">Curta</string>
+    <string name="genre_soap">Novela</string>
+    <string name="genre_specialInterest">Special Interest</string>
+    <string name="genre_sport">Esporte</string>
+    <string name="genre_sportingEvent">Evento Esportivo</string>
+    <string name="genre_sportsFilm">Filme Esportivo</string>
+    <string name="genre_suspense">Suspense</string>
+    <string name="genre_talkShow">Talk Show</string>
+    <string name="genre_thriller">Thriller</string>
+    <string name="genre_travel">Viagem</string>
+    <string name="genre_tvMovie">Filme de TV</string>
+    <string name="genre_war">Guerra</string>
+    <string name="genre_western">Faroeste</string>
+
+    <!-- transition shared elements -->
+    <string name="transition_poster" translatable="false">poster</string>
+    <string name="transition_poster_background" translatable="false">poster_background</string>
+
+    <!--Shortcuts-->
+    <string name="compose_shortcut_short_label1">Séries</string>
+    <string name="compose_shortcut_long_label1">Seriados</string>
+    <string name="compose_disabled_message1">Atalho desabilitado</string>
+
+</resources>

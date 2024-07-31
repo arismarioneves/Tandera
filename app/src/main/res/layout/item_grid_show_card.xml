@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_show_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/z_card"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardPreventCornerOverlap="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.mari05lim.tandera.views.custom_views.TanderaImageView
+            android:id="@+id/imageview_poster"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/show_poster_height"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:id="@+id/content_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/show_grid_two_line_bar_height"
+            android:background="@color/dark_gray"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/like_button"
+                android:layout_width="@dimen/show_grid_item_icon_size"
+                android:layout_height="@dimen/show_grid_item_icon_size"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/activity_vertical_margin"
+                android:src="@drawable/ic_heart_white" />
+
+            <com.mari05lim.tandera.views.custom_views.TanderaTextView
+                android:id="@+id/title"
+                style="@style/Widget.Tandera.Show.Grid.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Avengers" />
+
+            <com.mari05lim.tandera.views.custom_views.TanderaTextView
+                android:id="@+id/release"
+                style="@style/Widget.Tandera.Show.Grid.Subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginEnd="30dip"
+                android:layout_marginRight="30dip"
+                android:layout_marginBottom="-2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:text="Avengers" />
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

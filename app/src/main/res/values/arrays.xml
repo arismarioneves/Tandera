@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="themeSelection">
+        <item>@string/theme_light</item>
+        <item>@string/theme_dark</item>
+    </string-array>
+
+    <string-array name="countrySelection">
+        <item>@string/country_pt_br</item>
+        <item>@string/country_en_us</item>
+    </string-array>
+
+<!--    <string-array name="languageSelection">-->
+<!--        <item>@string/language_default</item>-->
+<!--        <item>@string/language_pt_br</item>-->
+<!--        <item>@string/language_en_us</item>-->
+<!--    </string-array>-->
+
+    <string-array name="themeSelectionData" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="countrySelectionData" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+<!--    <string-array name="languageSelectionData" translatable="false">-->
+<!--        <item>0</item>-->
+<!--        <item>1</item>-->
+<!--        <item>3</item>-->
+<!--    </string-array>-->
+
+</resources>

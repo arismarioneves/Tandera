@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mari05lim.tandera.views.custom_views.MovieDetailCardLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:title="@string/biography">
+
+    <com.mari05lim.tandera.views.custom_views.ExpandableTextView
+        android:id="@+id/textview_biography"
+        style="@style/Widget.Tandera.Movie.Detail.Summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_major"
+        android:paddingTop="@dimen/spacing_minor"
+        app:tda_font="roboto_condensed" />
+</com.mari05lim.tandera.views.custom_views.MovieDetailCardLayout>

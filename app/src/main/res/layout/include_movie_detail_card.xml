@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_minor"
+        android:layout_marginRight="@dimen/spacing_minor"
+        android:layout_marginBottom="@dimen/spacing_minor"
+        app:cardBackgroundColor="?BackgroundColorSecondary">
+
+        <LinearLayout
+            android:id="@+id/card_content_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/card_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:addStatesFromChildren="true"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/spacing_major">
+
+                <TextView
+                    android:id="@+id/textview_see_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:text="@string/see_more"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                    android:textColor="?attr/colorAccent"
+                    android:visibility="gone" />
+
+                <com.mari05lim.tandera.views.custom_views.TanderaTextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginEnd="@dimen/spacing_micro"
+                    android:layout_marginRight="@dimen/spacing_micro"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="?TextColorPrimary"
+                    app:tda_font="roboto_condensed" />
+
+            </FrameLayout>
+
+            <include
+                android:id="@+id/divider"
+                layout="@layout/include_divider" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

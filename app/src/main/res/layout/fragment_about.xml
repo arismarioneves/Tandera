@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/keyline"
+    android:paddingRight="@dimen/keyline">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/accent"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <ListView
+            android:id="@+id/listViewSettingsHeaders"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="130dp"
+            android:paddingTop="43dp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/whoistda"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+        android:id="@+id/tandera"
+        android:layout_width="151.3dp"
+        android:layout_height="56.6dp"
+        android:background="@drawable/tandera_name_red" />
+        <!--151.3dp x 56.6dp-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/facebook"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:background="@drawable/facebook" />-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/instagram"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:background="@drawable/instagram" />-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/paypal"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:background="@drawable/paypal" />-->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/whoistda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:paddingLeft="25.0dip"
+        android:paddingRight="25.0dip"
+        android:text="@string/whois_tandera"
+        android:textColor="@color/primary"
+        android:textSize="14.0sp" />
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.mari05lim.tandera.views.custom_views.TanderaTextView
+        android:id="@android:id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/spacing_micro"
+        android:layout_marginRight="@dimen/spacing_micro"
+        android:textColor="?TextColorPrimary"
+        app:tda_font="roboto_condensed_bold"
+        tools:text="Exemplo" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <com.mari05lim.tandera.views.custom_views.TanderaTextView
+        android:id="@android:id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="@dimen/spacing_micro"
+        android:textColor="?TextColorPrimary"
+        app:tda_font="roboto_condensed"
+        tools:text="Exemplo" />
+</merge>
