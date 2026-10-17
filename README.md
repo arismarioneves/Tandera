@@ -1,13 +1,6 @@
 # Tandera - Onde Assistir 🎬
 
-<img src="app\src\main\res\mipmap-xxxhdpi\ic_launcher.png" alt="Tandera - Onde Assistir" style="width:100px;"/>
-
-<div style="display: flex; justify-content: space-between;">
-    <img src="image\Tandera-Screenshot-01.png" alt="Google Play 1" style="width:23%;"/>
-    <img src="image\Tandera-Screenshot-02.png" alt="Google Play 2" style="width:23%;"/>
-    <img src="image\Tandera-Screenshot-03.png" alt="Google Play 3" style="width:23%;"/>
-    <img src="image\Tandera-Screenshot-05.png" alt="Google Play 4" style="width:23%;"/>
-</div>
+<img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="Tandera - Onde Assistir" style="width:100px;"/>
 
 ##
 
@@ -23,11 +16,53 @@ O Tandera começou em 2018 como uma brincadeira e acabou se tornando um projeto 
 
 Todo o versionamento foi feito localmente usando ZIPs (sim, ZIPs!), e com muito Stack Overflow e Google. O projeto foi desenvolvido em Java com a arquitetura MVP e algumas bibliotecas como Moxy, Dagger, Retrofit, ButterKnife e a API de animação do Android. A API foi desenvolvida em PHP e o banco de dados em MySQL.
 
-Infelizmente, o projeto foi descontinuado em 2021, mas foi uma experiência incrível e muito gratificante.
+O projeto foi descontinuado em 2021 e retomado em 2026 na versão 3.0, reescrita do zero (veja abaixo).
 
-E agora está aqui, em um repositório público, para ajudar outros desenvolvedores assim como outros [projetos](app\src\main\assets\licenses.xhtml) me ajudaram.
+Powered by TMDB - _Este produto usa a API do TMDB, mas não é endossado nem certificado pelo [TMDB](https://www.themoviedb.org/)_. Disponibilidade em streaming: [JustWatch](https://www.justwatch.com/).
 
-Powered by TMDB - _Este produto usa a API TMDb mas não é endossado ou certificado pelo [TMDb](https://www.themoviedb.org/)_.
+## Versão 3.0
+
+App Android nativo em **Kotlin + Jetpack Compose (Material 3)**, sem anúncios, sem Firebase/analytics e sem nenhuma coleta de dados.
+
+- **Início:** filmes em alta, nos cinemas, em breve, séries em alta e no ar ("Ver tudo" carrega por página).
+- **Buscar:** filmes e séries, com filtro de tipo.
+- **Título:** onde assistir no país escolhido (assinatura, grátis, anúncios, aluguel, compra), trailer, sinopse, compartilhar.
+- **Assistidos:** lista local (DataStore). A lista da versão 2.x (SQLite `tandera.db`) é importada automaticamente na atualização.
+- **Ajustes:** país dos streamings (BR, PT, US, AR, MX), política de privacidade, contato.
+
+O app fala só com a [API Tandera](https://ae8.com.br/tandera/api/) (repositório TanderaWEB). A chave do TMDB fica no servidor, não no APK.
+
+### Estrutura
+
+```
+app/src/main/java/com/mari05lim/tandera/
+  TanderaApplication.kt   dependências (OkHttp, API, DataStore) e carregador de imagens (Coil)
+  MainActivity.kt         splash, edge-to-edge, Compose
+  data/                   cliente da API, modelos, assistidos/ajustes, importação da v2
+  ui/                     navegação, tema e uma pasta por tela (tela + ViewModel)
+```
+
+Dependências: AndroidX (Compose, Navigation, Lifecycle, DataStore, SplashScreen), OkHttp, kotlinx.serialization e Coil. Sem DI framework: o grafo cabe em `TanderaApplication`.
+
+### Build
+
+Requisitos: Android Studio recente (AGP 9.4, Gradle 9.8, JDK 17+), SDK 37. `minSdk` 26.
+
+```
+gradlew assembleDebug       # instala como com.mari05lim.tandera.debug, ao lado da versão da loja
+gradlew testDebugUnitTest
+gradlew bundleRelease       # requer configurar a assinatura de release
+```
+
+A URL da API vem de `tandera.apiUrl` em `gradle.properties`. Para testar contra a API local no celular:
+
+```
+php -S 127.0.0.1:8099                    # na pasta do TanderaWEB
+adb reverse tcp:8099 tcp:8099
+gradlew installDebug -Ptandera.apiUrl=http://127.0.0.1:8099/api/
+```
+
+O build de debug libera HTTP só para `127.0.0.1` e `10.0.2.2` (emulador). O release exige HTTPS.
 
 ## Versões
 
