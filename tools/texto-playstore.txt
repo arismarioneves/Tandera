@@ -1,0 +1,50 @@
+TÍTULO (máx. 30):
+Tandera: Onde Assistir
+
+BREVE DESCRIÇÃO (máx. 80):
+Descubra em qual streaming está o filme ou a série que você quer ver.
+
+DESCRIÇÃO COMPLETA (máx. 4000):
+Descubra onde assistir legalmente aos seus filmes e séries preferidos.
+
+O Tandera mostra em quais serviços de streaming cada título está disponível no Brasil: Netflix, Prime Video, Disney+, HBO Max, Globoplay, Apple TV, Paramount+, Claro video, MUBI, Crunchyroll, Pluto TV, Mercado Play e outros.
+
+• Veja na hora se o título está na assinatura, de graça, com anúncios, para alugar ou para comprar.
+• Toque no serviço e abra o título direto no app de streaming.
+• Acompanhe o que está em alta, o que está nos cinemas e o que estreia em breve.
+• Busque filmes e séries, com ano, gêneros, duração, nota e trailer.
+• Marque o que você já assistiu e tenha sua lista sempre à mão.
+• Escolha o país: Brasil, Portugal, Estados Unidos, Argentina ou México.
+• Modo escuro automático.
+
+Sem cadastro, sem anúncios e sem coleta de dados.
+
+O Tandera não transmite filmes nem séries: ele mostra onde você pode assistir a cada um deles.
+
+Dados de filmes e séries: TMDB. Disponibilidade em streaming: JustWatch. Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.
+
+NOVIDADES DA VERSÃO 3.0 (máx. 500):
+Tandera de cara nova!
+• App reescrito do zero, mais rápido e leve.
+• Onde assistir com assinatura, aluguel ou compra, e link direto para o streaming.
+• Novas listas: em alta, nos cinemas, em breve e séries no ar.
+• Modo escuro e escolha de país.
+• Sem anúncios. Sua lista de assistidos foi mantida.
+
+POLÍTICA DE PRIVACIDADE:
+https://ae8.com.br/tandera/privacidade
+
+SITE:
+https://ae8.com.br/tandera/
+
+E-MAIL DE CONTATO:
+mariodev@outlook.com.br
+
+CATEGORIA:
+Entretenimento
+
+IMAGENS (tools/imagens):
+- icon/play_store_512.png ............ Ícone do app (512×512)
+- banners/feature_graphic_1024x500.png  Recurso gráfico (1024×500)
+- banners/screenshot_01..06.png ...... Capturas de tela do telefone (1242×2208)
+- icon/tandera-icon.svg .............. Arte-mestre do ícone (fonte do ícone adaptativo do app)

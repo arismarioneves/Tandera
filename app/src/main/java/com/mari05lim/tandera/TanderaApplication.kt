@@ -38,7 +38,7 @@ class TanderaApplication : Application(), SingletonImageLoader.Factory {
             .build()
     }
 
-    val api by lazy { TanderaApi(httpClient, BuildConfig.API_URL.toHttpUrl(), TanderaJson) }
+    val api by lazy { TanderaApi(httpClient, BuildConfig.API_URL.toHttpUrl(), BuildConfig.API_KEY, TanderaJson) }
     val watched by lazy { WatchedStore(dataStore, TanderaJson) }
     val settings by lazy { SettingsStore(dataStore) }
 

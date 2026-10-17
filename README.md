@@ -54,6 +54,10 @@ gradlew testDebugUnitTest
 gradlew bundleRelease       # requer configurar a assinatura de release
 ```
 
+O app se identifica na API com a chave `tandera.apiKey` (mesmo valor de `APP_API_KEY` no `.env` do TanderaWEB), enviada no cabeçalho `X-Tandera-Key`. Ela fica fora do Git: coloque em `local.properties` (`tandera.apiKey=...`) ou passe `-Ptandera.apiKey=...`. O build de release falha sem ela.
+
+O ícone é vetorial (`res/drawable/ic_launcher_foreground.xml`, adaptativo e monocromático); a arte-mestre e as imagens da Play Store ficam em `tools/imagens`, e o texto da ficha em `tools/texto-playstore.txt`.
+
 A URL da API vem de `tandera.apiUrl` em `gradle.properties`. Para testar contra a API local no celular:
 
 ```

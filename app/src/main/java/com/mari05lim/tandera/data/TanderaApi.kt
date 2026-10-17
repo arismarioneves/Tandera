@@ -22,10 +22,14 @@ class ApiException(message: String) : Exception(message)
 /** Campos novos na API não podem quebrar versões antigas do app. */
 val TanderaJson = Json { ignoreUnknownKeys = true }
 
-/** Cliente da API Tandera (TanderaWEB/api). A chave do TMDB fica só no servidor. */
+/**
+ * Cliente da API Tandera (TanderaWEB/api). A chave do TMDB fica só no servidor; [appKey]
+ * identifica o app (X-Tandera-Key) para que limites do site não se apliquem a ele.
+ */
 class TanderaApi(
     private val client: OkHttpClient,
     private val baseUrl: HttpUrl,
+    private val appKey: String,
     private val json: Json,
 ) {
     suspend fun catalog(catalog: Catalog, type: MediaType, region: String, page: Int): CatalogPage =
@@ -44,7 +48,8 @@ class TanderaApi(
         }.build()
 
         val body = try {
-            client.newCall(Request(url)).await().use { response ->
+            val request = Request.Builder().url(url).apply { if (appKey.isNotEmpty()) header(KEY_HEADER, appKey) }.build()
+            client.newCall(request).await().use { response ->
                 val text = response.body.string()
                 if (!response.isSuccessful) throw ApiException(errorMessage(response.code, text))
                 text
@@ -68,6 +73,7 @@ class TanderaApi(
     }
 
     private companion object {
+        const val KEY_HEADER = "X-Tandera-Key"
         const val NETWORK_ERROR = "Sem conexão. Verifique sua internet e tente novamente."
         const val UNAVAILABLE_ERROR = "Serviço temporariamente indisponível. Tente novamente em instantes."
         const val GENERIC_ERROR = "Não foi possível carregar agora. Tente novamente."

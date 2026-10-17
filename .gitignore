@@ -1,10 +1,34 @@
-*.iml
+# === Segredos / credenciais ===
+**/*.jks
+**/*.keystore
+**/keystore.properties
+**/keystore-data.txt
+**/google-services.json
+local.properties
+
+# === Build / IDE (Android & Gradle) ===
+**/build/
 .gradle/
 .kotlin/
+app/release/
+.playwright-mcp/
+*.iml
 .idea/
-build/
-/local.properties
-/captures
+*.apk
+*.aab
+*.ap_
+*.dex
+captures/
+.externalNativeBuild/
+.cxx/
+
+# === Sistema operacional ===
 .DS_Store
-*.jks
-*.keystore
+Thumbs.db
+desktop.ini
+
+# === Python ===
+__pycache__/
+
+# === Specs e planos locais ===
+docs/superpowers/

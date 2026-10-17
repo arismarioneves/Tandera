@@ -1,8 +1,19 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
 }
+
+/**
+ * Chave que identifica o app na API (cabeçalho X-Tandera-Key; APP_API_KEY no .env do TanderaWEB).
+ * Fica fora do Git: local.properties (tandera.apiKey=...) ou -Ptandera.apiKey=... no CI.
+ */
+val apiKey: String = providers.gradleProperty("tandera.apiKey").orNull
+    ?: rootProject.file("local.properties").takeIf { it.exists() }
+        ?.let { file -> Properties().apply { file.inputStream().use { load(it) } }.getProperty("tandera.apiKey") }
+    ?: ""
 
 android {
     namespace = "com.mari05lim.tandera"
@@ -17,6 +28,7 @@ android {
 
         buildConfigField("String", "API_URL", "\"${providers.gradleProperty("tandera.apiUrl").get()}\"")
         buildConfigField("String", "SITE_URL", "\"${providers.gradleProperty("tandera.siteUrl").get()}\"")
+        buildConfigField("String", "API_KEY", "\"$apiKey\"")
     }
 
     buildTypes {
@@ -39,6 +51,14 @@ android {
     buildFeatures {
         compose = true
         buildConfig = true
+    }
+}
+
+// Sem a chave o app de loja cairia nos limites do site: falha o build de release em vez de publicar assim.
+tasks.matching { it.name == "preReleaseBuild" }.configureEach {
+    val missingKey = apiKey.isBlank()
+    doFirst {
+        if (missingKey) throw GradleException("Defina tandera.apiKey no local.properties (mesmo valor de APP_API_KEY da API).")
     }
 }
 
