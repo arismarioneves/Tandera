@@ -15,7 +15,8 @@ O Tandera mostra em quais serviços de streaming cada título está disponível 
 • Busque filmes e séries, com ano, gêneros, duração, nota e trailer.
 • Marque o que você já assistiu e tenha sua lista sempre à mão.
 • Escolha o país: Brasil, Portugal, Estados Unidos, Argentina ou México.
-• Modo escuro automático.
+• Tema claro, escuro ou do sistema, com várias cores de destaque.
+• Compartilhe qualquer título com um link curto.
 
 Sem cadastro, sem anúncios e sem coleta de dados.
 
@@ -23,13 +24,11 @@ O Tandera não transmite filmes nem séries: ele mostra onde você pode assistir
 
 Dados de filmes e séries: TMDB. Disponibilidade em streaming: JustWatch. Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.
 
-NOVIDADES DA VERSÃO 3.0 (máx. 500):
-Tandera de cara nova!
-• App reescrito do zero, mais rápido e leve.
-• Onde assistir com assinatura, aluguel ou compra, e link direto para o streaming.
-• Novas listas: em alta, nos cinemas, em breve e séries no ar.
-• Modo escuro e escolha de país.
-• Sem anúncios. Sua lista de assistidos foi mantida.
+NOVIDADES DA VERSÃO 3.1 (máx. 500):
+• Novos Ajustes: tema claro, escuro ou do sistema e cores de destaque.
+• Nova página Sobre.
+• Links de compartilhamento mais curtos, com prévia do título.
+• Agora você pode apoiar o projeto com uma doação pela Google Play.
 
 POLÍTICA DE PRIVACIDADE:
 https://ae8.com.br/tandera/privacidade

@@ -8,6 +8,8 @@ import kotlinx.serialization.Serializable
 @Serializable data object SearchRoute
 @Serializable data object WatchedRoute
 @Serializable data object SettingsRoute
+@Serializable data object SupportRoute
+@Serializable data object AboutRoute
 
 @Serializable data class DetailsRoute(val type: MediaType, val id: Int)
 

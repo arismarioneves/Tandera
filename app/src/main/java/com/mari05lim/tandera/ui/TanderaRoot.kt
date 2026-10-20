@@ -5,10 +5,14 @@ import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Home
-import androidx.compose.material.icons.rounded.Search
-import androidx.compose.material.icons.rounded.Settings
-import androidx.compose.material.icons.rounded.TaskAlt
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.TaskAlt
+import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.Search
+import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material.icons.outlined.TaskAlt
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -31,15 +35,23 @@ import com.mari05lim.tandera.ui.catalog.CatalogScreen
 import com.mari05lim.tandera.ui.details.DetailsScreen
 import com.mari05lim.tandera.ui.home.HomeScreen
 import com.mari05lim.tandera.ui.search.SearchScreen
+import com.mari05lim.tandera.ui.settings.AboutScreen
 import com.mari05lim.tandera.ui.settings.SettingsScreen
+import com.mari05lim.tandera.ui.settings.SupportScreen
 import com.mari05lim.tandera.ui.watched.WatchedScreen
 import kotlin.reflect.KClass
 
-private enum class Tab(val route: Any, val routeClass: KClass<*>, @StringRes val label: Int, val icon: ImageVector) {
-    Home(HomeRoute, HomeRoute::class, R.string.tab_home, Icons.Rounded.Home),
-    Search(SearchRoute, SearchRoute::class, R.string.tab_search, Icons.Rounded.Search),
-    Watched(WatchedRoute, WatchedRoute::class, R.string.tab_watched, Icons.Rounded.TaskAlt),
-    Settings(SettingsRoute, SettingsRoute::class, R.string.tab_settings, Icons.Rounded.Settings),
+private enum class Tab(
+    val route: Any,
+    val routeClass: KClass<*>,
+    @StringRes val label: Int,
+    val icon: ImageVector,
+    val selectedIcon: ImageVector,
+) {
+    Home(HomeRoute, HomeRoute::class, R.string.tab_home, Icons.Outlined.Home, Icons.Filled.Home),
+    Search(SearchRoute, SearchRoute::class, R.string.tab_search, Icons.Outlined.Search, Icons.Filled.Search),
+    Watched(WatchedRoute, WatchedRoute::class, R.string.tab_watched, Icons.Outlined.TaskAlt, Icons.Filled.TaskAlt),
+    Settings(SettingsRoute, SettingsRoute::class, R.string.tab_settings, Icons.Outlined.Settings, Icons.Filled.Settings),
 }
 
 @Composable
@@ -67,7 +79,7 @@ fun TanderaRoot() {
                                     restoreState = true
                                 }
                             },
-                            icon = { Icon(tab.icon, null) },
+                            icon = { Icon(if (tab == currentTab) tab.selectedIcon else tab.icon, null) },
                             label = { Text(stringResource(tab.label)) },
                         )
                     }
@@ -87,7 +99,11 @@ fun TanderaRoot() {
             }
             composable<SearchRoute> { SearchScreen(onTitleClick = openTitle) }
             composable<WatchedRoute> { WatchedScreen(onTitleClick = openTitle) }
-            composable<SettingsRoute> { SettingsScreen() }
+            composable<SettingsRoute> {
+                SettingsScreen(onOpenSupport = { navController.navigate(SupportRoute) }, onOpenAbout = { navController.navigate(AboutRoute) })
+            }
+            composable<SupportRoute> { SupportScreen(onBack = navController::popBackStack) }
+            composable<AboutRoute> { AboutScreen(onBack = navController::popBackStack) }
             composable<CatalogRoute> { CatalogScreen(onBack = navController::popBackStack, onTitleClick = openTitle) }
             composable<DetailsRoute> { DetailsScreen(onBack = navController::popBackStack) }
         }

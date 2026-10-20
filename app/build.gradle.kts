@@ -23,8 +23,8 @@ android {
         applicationId = "com.mari05lim.tandera"
         minSdk = 26
         targetSdk = 37
-        versionCode = 14
-        versionName = "3.0"
+        versionCode = 15
+        versionName = "3.1"
 
         buildConfigField("String", "API_URL", "\"${providers.gradleProperty("tandera.apiUrl").get()}\"")
         buildConfigField("String", "SITE_URL", "\"${providers.gradleProperty("tandera.siteUrl").get()}\"")
@@ -82,6 +82,7 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
+    implementation(libs.billing)
 
     testImplementation(libs.junit)
 }

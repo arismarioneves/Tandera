@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:locale="pt">
     <string name="app_name">Tandera</string>
+    <string name="app_about">Tandera mostra onde assistir legalmente aos seus filmes e séries: assinatura, grátis, aluguel ou compra, nos principais streamings.</string>
+    <string name="app_author">Desenvolvido por Arismário Neves (Mari05liM)</string>
 
     <string name="tab_home">Início</string>
     <string name="tab_search">Buscar</string>
@@ -67,13 +69,42 @@
     <string name="watched_empty_title">Nada por aqui ainda</string>
     <string name="watched_empty_text">Toque em “Já assisti” na página de um filme ou série para guardar aqui.</string>
 
+    <string name="settings_appearance">Aparência</string>
+    <string name="settings_theme">Tema</string>
+    <string name="theme_system">Sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Escuro</string>
+    <string name="settings_accent">Cor de destaque</string>
+    <string name="accent_dynamic">Automática (cores do sistema)</string>
+    <string name="settings_content">Conteúdo</string>
     <string name="settings_region">País dos streamings</string>
     <string name="settings_region_help">Os serviços e lançamentos mudam de país para país.</string>
-    <string name="settings_rate">Avaliar o Tandera</string>
-    <string name="settings_feedback">Enviar sugestão</string>
-    <string name="settings_privacy">Política de privacidade</string>
-    <string name="settings_site">Site do Tandera</string>
-    <string name="settings_version">Versão</string>
+    <string name="settings_support">Apoiar o projeto</string>
+    <string name="settings_support_summary">Pague uma pipoca para o desenvolvedor</string>
+    <string name="settings_share">Compartilhar o app</string>
+    <string name="settings_rate">Avaliar na Play Store</string>
+    <string name="settings_feedback">Enviar feedback</string>
+    <string name="settings_about">Sobre</string>
+    <string name="settings_version">Versão %s</string>
+
+    <string name="support_title">Apoiar</string>
+    <string name="support_message">O Tandera é gratuito, sem anúncios e não coleta seus dados. Se ele te ajuda a achar o que assistir, considere apoiar o projeto.</string>
+    <string name="support_unavailable_title">Doação indisponível</string>
+    <string name="support_unavailable">Não foi possível falar com a Google Play agora. Verifique a conexão e se a Play Store está instalada.</string>
+    <string name="support_thanks_title">Valeu!</string>
+    <string name="support_thanks">Obrigado por ajudar a manter o Tandera no ar.</string>
+
+    <string name="about_legal">Informações</string>
+    <string name="about_privacy">Política de Privacidade</string>
+    <string name="about_site">Site</string>
+    <string name="about_contact">Contato</string>
+    <string name="about_data">Dados</string>
+    <string name="about_data_sources">TMDB e JustWatch</string>
+    <string name="about_open_source">Código aberto</string>
+    <string name="about_licenses">Jetpack Compose, AndroidX, Kotlin, kotlinx.serialization, OkHttp, Coil e Google Play Billing — Apache License 2.0.</string>
+
+    <string name="share_app_text">Baixe o Tandera e descubra em qual streaming está o filme ou a série que você quer ver.</string>
+    <string name="feedback_subject">Tandera %s — Feedback</string>
 
     <string name="attribution_availability">Dados de disponibilidade: JustWatch, via TMDB.</string>
     <string name="attribution_tmdb">Dados de filmes e séries: TMDB. Disponibilidade em streaming: JustWatch. Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.</string>

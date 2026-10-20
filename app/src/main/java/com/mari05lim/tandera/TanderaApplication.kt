@@ -9,6 +9,7 @@ import coil3.SingletonImageLoader
 import coil3.network.okhttp.OkHttpNetworkFetcherFactory
 import coil3.request.crossfade
 import com.mari05lim.tandera.data.LegacyWatchedImport
+import com.mari05lim.tandera.data.BillingRepository
 import com.mari05lim.tandera.data.SettingsStore
 import com.mari05lim.tandera.data.TanderaApi
 import com.mari05lim.tandera.data.TanderaJson
@@ -41,6 +42,7 @@ class TanderaApplication : Application(), SingletonImageLoader.Factory {
     val api by lazy { TanderaApi(httpClient, BuildConfig.API_URL.toHttpUrl(), BuildConfig.API_KEY, TanderaJson) }
     val watched by lazy { WatchedStore(dataStore, TanderaJson) }
     val settings by lazy { SettingsStore(dataStore) }
+    val billing by lazy { BillingRepository(this) }
 
     override fun onCreate() {
         super.onCreate()

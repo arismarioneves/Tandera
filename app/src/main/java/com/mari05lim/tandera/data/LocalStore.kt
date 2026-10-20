@@ -43,19 +43,61 @@ class WatchedStore(private val dataStore: DataStore<Preferences>, private val js
     }
 }
 
-/** País usado nas listas de lançamento e na disponibilidade dos streamings. */
+enum class ThemeMode { SYSTEM, LIGHT, DARK }
+
+/** Cores de destaque (mesma paleta do Bibliateca). RED é a cor da marca; DYNAMIC usa o papel de parede (Android 12+). */
+enum class Accent(val argb: Long) {
+    RED(0xFFE53935),
+    DYNAMIC(0xFFE53935),
+    TEAL(0xFF00897B),
+    GREEN(0xFF43A047),
+    YELLOW(0xFFF9A825),
+    ORANGE(0xFFEF6C00),
+    BLUE(0xFF1E88E5),
+    DARK_BLUE(0xFF283593),
+    DARK(0xFF455A64),
+}
+
+data class AppPrefs(
+    val themeMode: ThemeMode = ThemeMode.SYSTEM,
+    val accent: Accent = Accent.RED,
+    val region: Region = Region.Brazil,
+)
+
+/** Preferências do usuário: aparência e país usado nas listas e na disponibilidade dos streamings. */
 class SettingsStore(private val dataStore: DataStore<Preferences>) {
 
-    val region: Flow<Region> = dataStore.data
-        .map { prefs -> Region.fromCode(prefs[REGION]) }
+    val prefs: Flow<AppPrefs> = dataStore.data
+        .map { p ->
+            AppPrefs(
+                themeMode = enumOrDefault(p[THEME], ThemeMode.SYSTEM),
+                accent = enumOrDefault(p[ACCENT], Accent.RED),
+                region = Region.fromCode(p[REGION]),
+            )
+        }
         .distinctUntilChanged()
+
+    val region: Flow<Region> = prefs.map { it.region }.distinctUntilChanged()
 
     suspend fun setRegion(region: Region) {
         dataStore.edit { it[REGION] = region.code }
     }
 
+    suspend fun setThemeMode(mode: ThemeMode) {
+        dataStore.edit { it[THEME] = mode.name }
+    }
+
+    suspend fun setAccent(accent: Accent) {
+        dataStore.edit { it[ACCENT] = accent.name }
+    }
+
+    private inline fun <reified T : Enum<T>> enumOrDefault(name: String?, default: T): T =
+        enumValues<T>().firstOrNull { it.name == name } ?: default
+
     private companion object {
         val REGION = stringPreferencesKey("region")
+        val THEME = stringPreferencesKey("theme_mode")
+        val ACCENT = stringPreferencesKey("accent")
     }
 }
 
